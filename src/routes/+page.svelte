@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils'
-	import * as config from '$lib/config'
+	import { formatDate } from '$lib/utils';
+	import * as config from '$lib/config';
 
-	export let data
+	export let data;
 </script>
 
 <svelte:head>
@@ -10,15 +10,15 @@
 </svelte:head>
 
 <section>
-	<ul class="flex gap-10 flex-col max-w-screen-lg items-center justify-center text-white">
+	<ul class="flex max-w-screen-lg flex-col items-center justify-center gap-10 text-white">
 		{#each data.posts as post}
-			<li class="bg-black p-5 w-96 rounded-md gap-5 flex flex-col">
-				<a href={post.slug} class="text-5xl">{post.title}</a>
-				<p class="text-gray-500">{formatDate(post.date)}</p>
-				<p class="description">{post.description}</p>
-			</li>
+			<a href={post.slug}>
+				<li class="flex w-96 flex-col gap-5 rounded-md bg-black p-5">
+					<h1 class="text-5xl">{post.title}</h1>
+					<p class="text-gray-500">{formatDate(post.date)}</p>
+					<p class="description">{post.description}</p>
+				</li>
+			</a>
 		{/each}
 	</ul>
 </section>
-  
-  
