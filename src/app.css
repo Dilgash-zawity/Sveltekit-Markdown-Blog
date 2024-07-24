@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose pre {
+	max-inline-size: 100%;
+	padding: 10px;
+	border-radius: 8px;
+	tab-size: 3;
+}
+
+.prose h1 {
+	font-size: 40px;
+}
+
+.prose h2 {
+	font-size: 25px;
+}
+
+.prose h3 {
+	font-size: 18px;
+}
+
+.prose h3 {
+	font-size: 18px;
+}
+
+.prose ul {
+	list-style-type: disc;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
