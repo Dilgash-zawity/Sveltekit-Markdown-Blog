@@ -56,8 +56,8 @@ published: true
 
 In `svelte.config.js`, configure the languages for syntax highlighting as follows:
 
-```javascript
-langs: ['javascript', 'typescript']
+```typescript
+await highlighter.loadLanguage('javascript', 'typescript' , 'html')
 ```
 
 ## License
